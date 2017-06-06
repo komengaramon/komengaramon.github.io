@@ -1,34 +1,37 @@
-nuTorrent
-==============
+<img src="https://i.imgur.com/GtTmKUo.png" alt="screenshot"/>
 
-nuTorrent(νTorrent) is a pure javascript bittorrent client based on Electron, React, torrent-stream.
+> **TorrentSaga** is a a self-hosted remote torrent client, written in Go (golang). You start torrents remotely, which are downloaded as sets of files on the local disk of the server, which are then retrievable or streamable via HTTP.
 
-OS X Binary (v0.6.0): [download link](https://github.com/LeeChSien/nuTorrent/releases/download/v0.6.0/OSX-nuTorrent-0.6.0.zip)
+### Features
 
-Screenshot
-------------
+* Single binary
+* Cross platform
+* Embedded torrent search
+* Real-time updates
+* Mobile-friendly
+* Fast [content server](http://golang.org/pkg/net/http/#ServeContent)
 
-![alt tag](https://cloud.githubusercontent.com/assets/1298784/9428375/d335081c-49de-11e5-9cd0-e812a132d293.png)
+**Source**
 
-Usage
-------------
-* Open the app
-* Add a magnet url or torrent file.
+*[Go](https://golang.org/dl/) is required to install from source*
 
-Build
-------------
-Install dependencies.
-
-```bash
-$ npm install
+``` sh
+$ go get -v github.com/jaswinder-singh/torrentsaga/
 ```
 
-To start development!
+**Heroku**
 
-```bash
-npm run hot-dev-server
-npm run start-hot
-```
-License
-------------
-MIT © [LeeChSien](https://github.com/LeeChSien)
+Click this button to deploy *TorrentSaga* to *Heroku* free of cost...
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+
+![overview](https://docs.google.com/drawings/d/1ekyeGiehwQRyi6YfFA4_tQaaEpUaS8qihwJ-s3FT_VU/pub?w=606&h=305)
+
+
+**Credits**
+
+Credits to `anacrolix` for https://github.com/anacrolix/torrent<br>
+Credits to `jpillora` for https://github.com/jpillora/cloud-torrent
+
+<br>
