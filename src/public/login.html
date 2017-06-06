@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Login - Lunik - Torrent</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="icon" href="src/image/favicon.ico">
+    <link rel="stylesheet" href="src/css/style.css" async>
+    <link rel="stylesheet" href="src/bower_components/notify.me/dist/css/notify-me.min.css" async>
+    <link rel="stylesheet" href="src/css/auth.css" async>
+    <link rel="stylesheet" href="src/css/loading.css" async>
+    <link rel="stylesheet" href="src/css/themes/theme.css" async>
+    <link rel="stylesheet" href="src/css/themes/icon.css" async>
+    <link rel="stylesheet" href="src/bower_components/font-awesome/css/font-awesome.css" async>
+  </head>
+  <body>
+    <div class="loading">
+      <div class="loading-app" v-show="app.state"><div class="logo"></div></div>
+      <div class="loading-actions" v-show="action.state">
+        <svg class="circular" viewBox="25 25 50 50">
+          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"/>
+        </svg>
+      </div>
+    </div>
+    <div class="auth">
+      <div class="form">
+        <div class="login" v-show="login.state">
+          <h1>Login</h1>
+          <div class="user input">
+            <input type="text" name="user" v-model="login.user" id="login-user">
+            <span class="bar"></span>
+            <label for="login-user">Username...</label>
+          </div>
+          <div class="password input">
+            <input type="password" name="pass" v-model="login.pass" id="login-pass">
+            <span class="bar"></span>
+            <label for="login-pass">Password...</label>
+          </div>
+          <div class="staylogged checkbox">
+            <input type="checkbox" name="staylogged" v-model="login.staylogged" id="login-stay-logged">
+            <label for="login-stay-logged"> Stay logged</label>
+          </div>
+          <button class="submit button">Login</button>
+        </div>
+        <div class="register" v-show="register.state">
+          <h1>Register</h1>
+          <div class="user input">
+            <input type="text" name="user" v-model="register.user" id="register-user">
+            <span class="bar"></span>
+            <label for="register-user">Username...</label>
+          </div>
+          <div class="password input">
+            <input type="password" name="pass" v-model="register.pass" id="register-pass">
+            <span class="bar"></span>
+            <label for="register-pass">Password...</label>
+          </div>
+          <div class="password input">
+            <input type="password" name="pass2" v-model="register.pass2" id="register-pass2">
+            <span class="bar"></span>
+            <label for="register-pass2">Confirm password...</label>
+          </div>
+          <button class="submit">Register</button>
+        </div>
+        <div class="changepass" v-show="changepass.state">
+          <h1>Change password</h1>
+          <div class="user input">
+            <input type="text" name="user" v-model="changepass.user" id="changepass-user">
+            <span class="bar"></span>
+            <label for="changepass-user">Username...</label>
+          </div>
+          <div class="password input">
+            <input type="password" name="oldpass" v-model="changepass.oldpass" id="changepass-oldpass">
+            <span class="bar"></span>
+            <label for="changepass-oldpass">Old password...</label>
+          </div>
+          <div class="password input">
+            <input type="password" name="newpass" v-model="changepass.newpass" id="changepass-newpass">
+            <span class="bar"></span>
+            <label for="changepass-newPass">New password...</label>
+          </div>
+          <div class="password input">
+            <input type="password" name="newpass2" v-model="changepass.newpass2" id="changepass-newpass2">
+            <span class="bar"></span>
+            <label for="changepass-newpass2">Confirm new password...</label>
+          </div>
+          <button class="submit">Change Password</button>
+        </div>
+        <div class="invite" v-show="invite.state">
+          <h1>Register</h1>
+          <p>You don't have any invitation.</p>
+          <p>Ask your Admin to get one.</p>
+          <div class="invitation input">
+            <input type="text" name="invite" id="invite-invitatation">
+            <span class="bar"></span>
+            <label for="invite-invitatation">Invitation Code...</label>
+          </div>
+        </div>
+        <p class="info">{{ info }}</p>
+        <div class="switch">
+          <div class="switch button" id="login">Login</div>
+          <div class="switch button" id="register">Register</div>
+          <div class="switch button" id="changepass">Change Password</div>
+        </div>
+      </div>
+      <div class="footer">
+        <p><a target="_blank" href="https://github.com/Lunik/Lunik-Torrent/issues">FeedBack</a></p>
+        <p>Powered by <a target="_blank" href="https://github.com/Lunik">@Lunik</a></p>
+      </div>
+    </div>
+    <script data-main="src/js/auth" src="src/bower_components/requirejs/require.js" async></script>
+  </body>
+</html>

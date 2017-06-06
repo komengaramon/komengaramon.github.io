@@ -1,0 +1,33 @@
+.searchtorrent-pop {
+  text-align: left;
+  width: 100%;
+}
+
+.searchtorrent-pop .search-header {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.searchtorrent-pop table {
+  border-collapse: collapse;
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+
+.searchtorrent-pop table:first-of-type{
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 750px) {
+  .searchtorrent-pop table {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .searchtorrent-pop .seed, .searchtorrent-pop .peer {
+    display: none;
+  }
+}
