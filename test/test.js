@@ -263,7 +263,7 @@ describe('Backend', function () {
         request(url, function (err, res, body) {
           assert(!err)
           if (!err && res.statusCode === 200) {
-            assert(body.match('<title>Login - Lunik - Torrent</title>'))
+            assert(body.match('<title>Login - Parasidad Permanenge</title>'))
           }
           done()
         })
